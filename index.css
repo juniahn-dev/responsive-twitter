@@ -1,0 +1,189 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+a {
+  color: inherit;
+}
+
+input {
+  border: none;
+
+  color: #fff;
+}
+
+body {
+  background-color: #000;
+
+  color: #fff;
+}
+
+.container {
+  display: flex;
+
+  width: 1240px;
+  margin: 0 auto;
+}
+
+.navigation {
+  position: fixed;
+
+  height: 100%;
+  border-right: 1px solid #252a2b;
+
+  font-size: 20px;
+
+  .nav-logo {
+    filter: invert(1);
+    width: 25px;
+    height: 25px;
+    margin: 12px 12px;
+  }
+
+  .nav-ul {
+    li {
+      width: 260px;
+      padding: 12px;
+
+      &#here {
+        font-weight: bold;
+      }
+
+      & > a {
+        padding: 12px 20px;
+        border-radius: 30px;
+      }
+
+      &:hover {
+        & > a {
+          background-color: #1b1b1b;
+        }
+      }
+    }
+  }
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  height: 100%;
+  margin-left: 261px;
+
+  .header {
+    position: sticky;
+    top: 0;
+
+    display: grid;
+    grid-template-columns: 3.2fr 2fr;
+
+    background-color: #000;
+
+    .header-ul {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+      border-bottom: 1px solid #252a2b;
+      border-right: 1px solid #252a2b;
+
+      li {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        a {
+          padding: 15px 0;
+
+          font-weight: bold;
+          color: #6f767b;
+        }
+
+        &#header-here {
+          a {
+            border-bottom: 3px solid #1b9bee;
+
+            color: #fff;
+          }
+        }
+      }
+    }
+
+    input {
+      background-color: #252a2b;
+      margin: 5px 20px;
+      padding: 0 20px;
+      border-radius: 50px;
+    }
+  }
+}
+
+.content-container {
+  overflow-y: scroll;
+
+  display: grid;
+  grid-template-columns: 3.2fr 2fr;
+
+  .content-wrapper {
+    border-right: 1px solid #252a2b;
+
+    .twitter-content {
+      display: grid;
+      grid-template-columns: 50px 1fr;
+
+      padding: 16px;
+      border-bottom: 1px solid #252a2b;
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      .tweet-logo {
+        width: 40px;
+        height: 40px;
+        border-radius: 5px;
+      }
+
+      .title {
+        margin-bottom: 5px;
+
+        font-weight: bold;
+
+        span {
+          margin-left: 5px;
+
+          font-weight: normal;
+          color: #575c5f;
+        }
+      }
+
+      .content {
+        img {
+          width: 100%;
+          margin-top: 10px;
+          border-radius: 10px;
+        }
+      }
+    }
+  }
+
+  .side-content-wrapper {
+    margin: 8px 20px 0;
+  }
+}
+
+.side-container {
+  overflow-y: scroll;
+
+  border-left: 1px solid #252a2b;
+  padding-left: 10px;
+  height: 1000px;
+}
+
+footer {
+  border-top: 1px solid #252a2b;
+}
