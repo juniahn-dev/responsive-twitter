@@ -16,6 +16,18 @@ input {
   color: #fff;
 }
 
+button {
+  background: inherit;
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+  padding: 0;
+  overflow: visible;
+  cursor: pointer;
+
+  color: #fff;
+}
+
 body {
   background-color: #000;
 
@@ -115,7 +127,7 @@ body {
 
     input {
       background-color: #252a2b;
-      margin: 5px 20px;
+      margin: 5px 30px;
       padding: 0 20px;
       border-radius: 50px;
     }
@@ -172,16 +184,139 @@ body {
   }
 
   .side-content-wrapper {
-    margin: 8px 20px 0;
+    margin: 12px 30px;
   }
 }
 
-.side-container {
-  overflow-y: scroll;
+.grid-example {
+  display: grid;
+  border: 1px solid #fff;
+  padding: 10px;
 
-  border-left: 1px solid #252a2b;
-  padding-left: 10px;
-  height: 1000px;
+  &#grid1 {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas:
+      "header header header header"
+      "main main main aside"
+      "main main main ."
+      "footer footer footer footer";
+    gap: 10px;
+  }
+
+  .grid-header {
+    background-color: teal;
+    grid-area: header;
+  }
+  .grid-main {
+    background-color: orange;
+    grid-area: main;
+  }
+  .grid-aside {
+    background-color: thistle;
+    grid-area: aside;
+  }
+  .grid-footer {
+    background-color: gray;
+    grid-area: footer;
+  }
+}
+
+.white-space {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  width: 519px;
+  margin-top: 20px;
+}
+
+.side-content-wrapper {
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  .side-content {
+    padding: 12px 16px;
+    border: 1px solid #252a2b;
+    border-radius: 16px;
+
+    h3 {
+      font-size: 22px;
+    }
+
+    .side-info {
+      margin-top: 10px;
+
+      .side-title {
+        display: flex;
+
+        .tweet-logo {
+          width: 16px;
+          height: 16px;
+          border-radius: 50%;
+        }
+
+        .happen-logo {
+          width: 79px;
+          height: 79px;
+          border-radius: 10px;
+          object-fit: cover;
+        }
+
+        .happen-title {
+          margin-left: 10px;
+
+          font-size: 15px;
+
+          span {
+            display: block;
+
+            margin-top: 10px;
+          }
+        }
+
+        .title {
+          display: flex;
+          align-items: center;
+
+          margin-left: 5px;
+
+          span {
+            margin-left: 5px;
+          }
+        }
+
+        span {
+          font-size: 13px;
+          font-weight: normal;
+          color: #575c5f;
+        }
+      }
+
+      .trend {
+        flex-direction: column;
+        gap: 20px;
+
+        margin-top: 20px;
+      }
+
+      .side-talk {
+        margin-top: 10px;
+      }
+    }
+
+    button {
+      margin-top: 10px;
+      padding: 8px 15px;
+      background-color: #1b9bee;
+      border-radius: 50px;
+
+      font-size: 15px;
+      font-weight: bold;
+    }
+  }
 }
 
 footer {
