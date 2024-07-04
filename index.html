@@ -3,9 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- External CSS -->
     <link rel="stylesheet" href="index.css" />
     <link rel="icon" href="favicon.ico" />
     <style>
+      /* Internal CSS */
       .content-ul {
         margin-top: 20px;
         li {
@@ -40,9 +42,13 @@
   </head>
   <body>
     <div class="container">
+      <!-- Navigation Bar -->
       <nav aria-label="navigation" class="navigation">
+        <!-- Logo -->
         <img class="nav-logo" src="./assets/twitter.png" />
+        <!-- Navigation Links -->
         <ul class="nav-ul">
+          <!-- Displaying to current page using id tag -->
           <li id="here"><a href="#">Home</a></li>
           <li><a href="#">Explore</a></li>
           <li><a href="./pages/notifications.html">Notifications</a></li>
@@ -64,7 +70,9 @@
           </ul>
           <input placeholder="Search" />
         </header>
+        <!-- Main Content Section -->
         <section class="content-container">
+          <!-- Main Tweet list -->
           <div class="content-wrapper">
             <div class="twitter-content">
               <img
@@ -120,6 +128,7 @@
                   Display block<span>@Display_block · Jun 8</span>
                 </div>
                 <div class="content">
+                  <!-- Inline CSS -->
                   <p style="display: block; margin-bottom: 20px">
                     block makes a box standalone, fitting the entire width of
                     its containing box, with an effective line break before and
@@ -226,6 +235,7 @@
                     <div>Item Four</div>
                   </div>
                   <div class="flex-example" style="display: flex">
+                    <!-- Mixed ordering with using, flex -->
                     <div style="order: 2">One</div>
                     <div style="order: 4">Two</div>
                     <div style="order: 1">Three</div>
@@ -269,6 +279,7 @@
               </div>
             </div>
           </div>
+          <!-- Side X Info -->
           <aside class="side-content-wrapper">
             <div class="side-content">
               <h3>Subscribe to Premium</h3>
