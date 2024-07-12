@@ -391,6 +391,45 @@
         </section>
         <footer>footer</footer>
       </main>
+      <div class="message-container">
+        <div class="message-header" onclick="onMessageBox()">
+          Messages
+          <div>
+            <img class="message-img" src="./assets/message.png" alt="message" />
+            <img
+              class="message-img arrow"
+              src="./assets/double-arrow.png"
+              alt="arrow"
+            />
+          </div>
+        </div>
+        <div class="message-body">
+          <div class="message-content">
+            <img
+              class="tweet-logo"
+              src="https://pbs.twimg.com/profile_images/874276197357596672/kUuht00m_400x400.jpg"
+            />
+            <div>
+              <div class="title">
+                Donald J. Trump<span>@realDonaldTrump · 5h</span>
+              </div>
+              <div class="content">Come on bro</div>
+            </div>
+          </div>
+          <div class="message-content">
+            <img
+              class="tweet-logo"
+              src="https://pbs.twimg.com/profile_images/1780044485541699584/p78MCn3B_400x400.jpg"
+            />
+            <div>
+              <div class="title">
+                Elon Musk<span>@elonmusk · Jul 11, 2024</span>
+              </div>
+              <div class="content">I want to friend with you</div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <script>
@@ -400,6 +439,20 @@
           alert("You search for " + e.target.value);
         }
       });
+
+      const onMessageBox = () => {
+        const messageContainer =
+          document.getElementsByClassName("message-container")[0];
+        const classList = messageContainer.classList.value.split(" ");
+        const isOnClass = classList.find((v) => v === "message-box-on");
+
+        if (!isOnClass) {
+          messageContainer.classList.add("message-box-on");
+          return;
+        }
+
+        messageContainer.classList.remove("message-box-on");
+      };
     </script>
   </body>
 </html>
