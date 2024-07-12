@@ -3,9 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../index.css" />
+    <!-- External CSS -->
+    <link rel="stylesheet" href="../css/desktop.css" />
     <link rel="icon" href="favicon.ico" />
     <style>
+      /* Internal CSS */
       .content-ul {
         margin-top: 20px;
         li {
@@ -19,6 +21,10 @@
             margin-right: 0;
           }
         }
+      }
+
+      .flex-example.flex {
+        display: flex;
       }
 
       .flex-example {
@@ -36,24 +42,78 @@
         }
       }
     </style>
-    <title>Notifications / X</title>
+    <title>Home / X</title>
   </head>
   <body>
     <div class="container">
+      <!-- Navigation Bar -->
       <nav aria-label="navigation" class="navigation">
+        <!-- Logo -->
         <img class="nav-logo" src="../assets/twitter.png" />
+        <!-- Navigation Links -->
         <ul class="nav-ul">
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="#">Explore</a></li>
-          <li id="here"><a href="#">Notifications</a></li>
-          <li><a href="#">Messages</a></li>
-          <li><a href="#">Grok</a></li>
-          <li><a href="#">Lists</a></li>
-          <li><a href="#">Bookmarks</a></li>
-          <li><a href="#">Communities</a></li>
-          <li><a href="#">Premium</a></li>
-          <li><a href="#">Profile</a></li>
-          <li><a href="#">More</a></li>
+          <!-- Displaying to current page using id tag -->
+          <li>
+            <a href="../index.html">
+              <img src="../assets/home.png" alt="home" />
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="../assets/explore.png" alt="explore" />
+              Explore
+            </a>
+          </li>
+          <li id="here">
+            <a href="#">
+              <img src="../assets/notification.png" alt="notification" />
+              Notifications
+              <div class="dot"></div>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="../assets/message.png" alt="message" />
+              Messages
+            </a>
+          </li>
+          <li>
+            <a href="#"><img src="../assets/grok.png" alt="grok" />Grok</a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="../assets/bookmark.png" alt="bookmark" />
+              Bookmarks
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="../assets/community.png" alt="community" />
+              Communities
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="../assets/twitter.png" alt="twitter" />
+              Premium
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="../assets/verify.png" alt="verify" />
+              Verified Orgs
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="../assets/profile.png" alt="profile" />
+              Profile
+            </a>
+          </li>
+          <li>
+            <a href="#"><img src="../assets/more.png" alt="more" />More</a>
+          </li>
         </ul>
       </nav>
       <main class="main-container">
@@ -62,9 +122,13 @@
             <li id="header-here"><a>For you</a></li>
             <li><a>Following</a></li>
           </ul>
-          <input placeholder="Search" />
+          <form>
+            <input type="text" placeholder="Search" />
+          </form>
         </header>
+        <!-- Main Content Section -->
         <section class="content-container">
+          <!-- Main Tweet list -->
           <div class="content-wrapper">
             <div class="twitter-content">
               <img
@@ -120,6 +184,7 @@
                   Display block<span>@Display_block · Jun 8</span>
                 </div>
                 <div class="content">
+                  <!-- Inline CSS -->
                   <p style="display: block; margin-bottom: 20px">
                     block makes a box standalone, fitting the entire width of
                     its containing box, with an effective line break before and
@@ -195,8 +260,8 @@
                 <div class="title">Flex<span>@Flex_CSS · Jun 26</span></div>
                 <div class="content">
                   <div
-                    class="flex-example"
-                    style="display: flex; flex-wrap: nowrap; width: 200px"
+                    class="flex-example flex"
+                    style="flex-wrap: nowrap; width: 200px"
                   >
                     <div>Item One</div>
                     <div>Item Two</div>
@@ -204,13 +269,8 @@
                     <div>Item Four</div>
                   </div>
                   <div
-                    class="flex-example"
-                    style="
-                      display: flex;
-                      flex-wrap: wrap;
-                      gap: 10px;
-                      width: 200px;
-                    "
+                    class="flex-example flex"
+                    style="flex-wrap: wrap; gap: 10px; width: 200px"
                   >
                     <div>Item One</div>
                     <div
@@ -225,7 +285,8 @@
                     <div>Item Three</div>
                     <div>Item Four</div>
                   </div>
-                  <div class="flex-example" style="display: flex">
+                  <div class="flex-example flex">
+                    <!-- Mixed ordering with using, flex -->
                     <div style="order: 2">One</div>
                     <div style="order: 4">Two</div>
                     <div style="order: 1">Three</div>
@@ -269,6 +330,7 @@
               </div>
             </div>
           </div>
+          <!-- Side X Info -->
           <aside class="side-content-wrapper">
             <div class="side-content">
               <h3>Subscribe to Premium</h3>
@@ -330,5 +392,14 @@
         <footer>footer</footer>
       </main>
     </div>
+
+    <script>
+      document.querySelector("form").addEventListener("keydown", function (e) {
+        if (event.key === "Enter") {
+          event.preventDefault();
+          alert("You search for " + e.target.value);
+        }
+      });
+    </script>
   </body>
 </html>

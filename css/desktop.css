@@ -1,51 +1,22 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  text-decoration: none;
-  list-style: none;
-}
-
-a {
-  color: inherit;
-}
-
-input {
-  border: none;
-
-  color: #fff;
-}
-
-button {
-  background: inherit;
-  border: none;
-  box-shadow: none;
-  border-radius: 0;
-  padding: 0;
-  overflow: visible;
-  cursor: pointer;
-
-  color: #fff;
-}
-
-body {
-  background-color: #000;
-
-  color: #fff;
-}
+@import url("./global.css");
 
 .container {
+  position: relative;
+
   display: flex;
 
   width: 1240px;
   margin: 0 auto;
 }
 
+.container .navigation {
+  border-right: 1px solid var(--default-gray);
+}
+
 .navigation {
   position: fixed;
 
   height: 100%;
-  border-right: 1px solid #252a2b;
 
   font-size: 20px;
 
@@ -57,17 +28,42 @@ body {
   }
 
   .nav-ul {
+    width: 260px;
+
     li {
-      width: 260px;
-      padding: 12px;
+      padding-right: 20px;
 
       &#here {
         font-weight: bold;
       }
 
       & > a {
-        padding: 12px 20px;
+        position: relative;
+
+        display: flex;
+        align-items: center;
+        padding: 12px;
+
+        width: fit-content;
         border-radius: 30px;
+
+        img {
+          filter: invert(1);
+          width: 26px;
+          height: 26px;
+          margin-right: 20px;
+        }
+
+        .dot {
+          position: absolute;
+          top: 10px;
+          left: 35px;
+
+          width: 7px;
+          height: 7px;
+          border-radius: 50%;
+          background-color: var(--default-blue);
+        }
       }
 
       /* change background-color on navigation a tag */
@@ -101,8 +97,8 @@ body {
       display: grid;
       grid-template-columns: 1fr 1fr;
 
-      border-bottom: 1px solid #252a2b;
-      border-right: 1px solid #252a2b;
+      border-bottom: 1px solid var(--default-gray);
+      border-right: 1px solid var(--default-gray);
 
       li {
         display: flex;
@@ -118,19 +114,26 @@ body {
 
         &#header-here {
           a {
-            border-bottom: 3px solid #1b9bee;
+            border-bottom: 3px solid var(--default-blue);
 
-            color: #fff;
+            color: var(--default-white);
           }
         }
       }
     }
 
-    input {
-      background-color: #252a2b;
+    form {
+      width: calc(100% - 60px);
+      height: calc(100% - 10px);
       margin: 5px 30px;
-      padding: 0 20px;
-      border-radius: 50px;
+
+      input[type="text"] {
+        width: 100%;
+        height: 100%;
+        background-color: var(--default-gray);
+        padding: 0 20px;
+        border-radius: 50px;
+      }
     }
   }
 }
@@ -143,14 +146,14 @@ body {
   grid-template-columns: 3.2fr 2fr;
 
   .content-wrapper {
-    border-right: 1px solid #252a2b;
+    border-right: 1px solid var(--default-gray);
 
     .twitter-content {
       display: grid;
       grid-template-columns: 50px 1fr;
 
       padding: 16px;
-      border-bottom: 1px solid #252a2b;
+      border-bottom: 1px solid var(--default-gray);
 
       &:last-child {
         border-bottom: none;
@@ -171,7 +174,7 @@ body {
           margin-left: 5px;
 
           font-weight: normal;
-          color: #575c5f;
+          color: var(--light-gray);
         }
       }
 
@@ -192,7 +195,7 @@ body {
 
 .grid-example {
   display: grid;
-  border: 1px solid #fff;
+  border: 1px solid var(--default-white);
   padding: 10px;
 
   /* grid content example -> use grid-template-areas */
@@ -242,7 +245,7 @@ body {
 
   .side-content {
     padding: 12px 16px;
-    border: 1px solid #252a2b;
+    border: 1px solid var(--default-gray);
     border-radius: 16px;
 
     h3 {
@@ -294,7 +297,7 @@ body {
         span {
           font-size: 13px;
           font-weight: normal;
-          color: #575c5f;
+          color: var(--light-gray);
         }
       }
 
@@ -313,7 +316,7 @@ body {
     button {
       margin-top: 10px;
       padding: 8px 15px;
-      background-color: #1b9bee;
+      background-color: var(--default-blue);
       border-radius: 50px;
 
       font-size: 15px;
@@ -323,5 +326,5 @@ body {
 }
 
 footer {
-  border-top: 1px solid #252a2b;
+  border-top: 1px solid var(--default-gray);
 }
