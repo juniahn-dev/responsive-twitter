@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- External CSS -->
     <link rel="stylesheet" href="../css/desktop.css" />
-    <link rel="icon" href="favicon.ico" />
+    <link rel="stylesheet" href="../css/tablet.css" />
+    <link rel="stylesheet" href="../css/mobile.css" />
+
+    <link rel="icon" href="../favicon.ico" />
     <style>
       /* Internal CSS */
       .content-ul {
@@ -49,70 +52,85 @@
       <!-- Navigation Bar -->
       <nav aria-label="navigation" class="navigation">
         <!-- Logo -->
-        <img class="nav-logo" src="../assets/twitter.png" />
+        <picture>
+          <source
+            srcset="../assets/old-twitter.png"
+            media="(max-width: 800px)"
+          />
+          <img
+            class="nav-logo"
+            src="../assets/twitter.png"
+            alt="twitter-logo"
+          />
+        </picture>
         <!-- Navigation Links -->
         <ul class="nav-ul">
           <!-- Displaying to current page using id tag -->
           <li>
             <a href="../index.html">
               <img src="../assets/home.png" alt="home" />
-              Home
+              <span>Home</span>
             </a>
           </li>
           <li>
             <a href="#">
               <img src="../assets/explore.png" alt="explore" />
-              Explore
+              <span>Explore</span>
             </a>
           </li>
           <li id="here">
             <a href="#">
               <img src="../assets/notification.png" alt="notification" />
-              Notifications
+              <span>Notifications</span>
               <div class="dot"></div>
             </a>
           </li>
           <li>
             <a href="#">
               <img src="../assets/message.png" alt="message" />
-              Messages
+              <span>Messages</span>
             </a>
           </li>
           <li>
-            <a href="#"><img src="../assets/grok.png" alt="grok" />Grok</a>
+            <a href="#"
+              ><img src="../assets/grok.png" alt="grok" /><span>Grok</span></a
+            >
           </li>
-          <li>
+          <li class="mobile">
             <a href="#">
               <img src="../assets/bookmark.png" alt="bookmark" />
-              Bookmarks
+              <span>Bookmarks</span>
             </a>
           </li>
           <li>
             <a href="#">
               <img src="../assets/community.png" alt="community" />
-              Communities
+              <span>Communities</span>
             </a>
           </li>
-          <li>
+          <li class="mobile">
             <a href="#">
               <img src="../assets/twitter.png" alt="twitter" />
-              Premium
+              <span>Premium</span>
             </a>
           </li>
-          <li>
+          <li class="mobile">
             <a href="#">
               <img src="../assets/verify.png" alt="verify" />
-              Verified Orgs
+              <span>Verified Orgs</span>
             </a>
           </li>
-          <li>
+          <li class="mobile">
             <a href="#">
               <img src="../assets/profile.png" alt="profile" />
-              Profile
+              <span>Profile</span>
             </a>
           </li>
-          <li>
-            <a href="#"><img src="../assets/more.png" alt="more" />More</a>
+          <li class="mobile">
+            <a href="#"
+              ><img src="../assets/more.png" alt="more" />
+              <span>More</span>
+            </a>
           </li>
         </ul>
       </nav>
@@ -223,21 +241,12 @@
                     style="float: right; width: 100px; height: 100px"
                     src="https://avatars.githubusercontent.com/u/78336307?v=4"
                   />
-                  Float is a CSS positioning property. To understand its purpose
-                  and origin, we can look to print design. In a print layout,
-                  images may be set into the page such that text wraps around
-                  them as needed. This is commonly and appropriately called
-                  “text wrap”. Here is an example of that.
-                  <hr />
-                  <img
-                    style="float: left; width: 100px; height: 100px"
-                    src="https://avatars.githubusercontent.com/u/78336307?v=4"
-                  />
-                  <img
-                    style="float: right; width: 100px; height: 100px"
-                    src="https://avatars.githubusercontent.com/u/78336307?v=4"
-                  />
-                  <p style="clear: both">
+                  <p class="test" style="clear: both">
+                    Float is a CSS positioning property. To understand its
+                    purpose and origin, we can look to print design. In a print
+                    layout, images may be set into the page such that text wraps
+                    around them as needed. This is commonly and appropriately
+                    called “text wrap”. Here is an example of that. ///
                     clear:both makes the element drop below any floated elements
                     that precede it in the document. You can also use clear:left
                     or clear:right to make it drop below only those elements
@@ -348,7 +357,7 @@
                     class="tweet-logo"
                     src="https://pbs.twimg.com/profile_images/1780044485541699584/p78MCn3B_400x400.jpg"
                   />
-                  <div class="title">Elon Musk<span>is speaking</span></div>
+                  <strong>Elon Musk<span>is speaking</span></strong>
                 </div>
                 <div class="side-talk">
                   Tonight was a clear victory … for memes
@@ -389,8 +398,50 @@
             </div>
           </aside>
         </section>
-        <footer>footer</footer>
       </main>
+      <div class="message-container">
+        <div class="message-header" onclick="onMessageBox()">
+          Messages
+          <div>
+            <img
+              class="message-img"
+              src="../assets/message.png"
+              alt="message"
+            />
+            <img
+              class="message-img arrow"
+              src="../assets/double-arrow.png"
+              alt="arrow"
+            />
+          </div>
+        </div>
+        <div class="message-body">
+          <div class="message-content">
+            <img
+              class="tweet-logo"
+              src="https://pbs.twimg.com/profile_images/874276197357596672/kUuht00m_400x400.jpg"
+            />
+            <div>
+              <div class="title">
+                Donald J. Trump<span>@realDonaldTrump · 5h</span>
+              </div>
+              <div class="content">I'm come back from hell!!!</div>
+            </div>
+          </div>
+          <div class="message-content">
+            <img
+              class="tweet-logo"
+              src="https://pbs.twimg.com/profile_images/1780044485541699584/p78MCn3B_400x400.jpg"
+            />
+            <div>
+              <div class="title">
+                Elon Musk<span>@elonmusk · Jul 11, 2024</span>
+              </div>
+              <div class="content">I want to friend with you</div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <script>
@@ -400,6 +451,20 @@
           alert("You search for " + e.target.value);
         }
       });
+
+      const onMessageBox = () => {
+        const messageContainer =
+          document.getElementsByClassName("message-container")[0];
+        const classList = messageContainer.classList.value.split(" ");
+        const isOnClass = classList.find((v) => v === "message-box-on");
+
+        if (!isOnClass) {
+          messageContainer.classList.add("message-box-on");
+          return;
+        }
+
+        messageContainer.classList.remove("message-box-on");
+      };
     </script>
   </body>
 </html>

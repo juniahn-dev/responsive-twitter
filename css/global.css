@@ -8,6 +8,10 @@
   font-family: "Roboto", sans-serif;
 }
 
+html {
+  font-size: 10px;
+}
+
 body,
 div,
 p,
@@ -37,8 +41,14 @@ button {
   padding: 0;
 }
 
+ul {
+  margin-bottom: 0 !important;
+  padding-left: 0 !important;
+}
+
 a {
-  color: inherit;
+  color: inherit !important;
+  text-decoration: none !important;
 }
 
 input {
@@ -57,12 +67,17 @@ button {
   cursor: pointer;
 
   color: var(--default-white);
+
+  &:focus {
+    outline: none !important;
+    box-shadow: none !important;
+  }
 }
 
 body {
-  background-color: #000;
+  background-color: #000 !important;
 
-  color: var(--default-white);
+  color: var(--default-white) !important;
 }
 
 :root {

@@ -5,11 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- External CSS -->
     <link rel="stylesheet" href="./css/desktop.css" />
-    <link rel="icon" href="favicon.ico" />
+    <link rel="stylesheet" href="./css/tablet.css" />
+    <link rel="stylesheet" href="./css/mobile.css" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link rel="icon" href="./favicon.ico" />
     <style>
       /* Internal CSS */
       .content-ul {
         margin-top: 20px;
+
         li {
           display: inline-block;
 
@@ -49,75 +61,97 @@
       <!-- Navigation Bar -->
       <nav aria-label="navigation" class="navigation">
         <!-- Logo -->
-        <img class="nav-logo" src="./assets/twitter.png" />
+        <picture>
+          <source
+            srcset="./assets/old-twitter.png"
+            media="(max-width: 800px)"
+          />
+          <img class="nav-logo" src="./assets/twitter.png" alt="twitter-logo" />
+        </picture>
         <!-- Navigation Links -->
         <ul class="nav-ul">
           <!-- Displaying to current page using id tag -->
           <li id="here">
             <a href="#">
               <img src="./assets/home.png" alt="home" />
-              Home
+              <span>Home</span>
               <div class="dot"></div>
             </a>
           </li>
           <li>
             <a href="#">
               <img src="./assets/explore.png" alt="explore" />
-              Explore
+              <span>Explore</span>
             </a>
           </li>
           <li>
             <a href="./pages/notifications.html">
               <img src="./assets/notification.png" alt="notification" />
-              Notifications
+              <span>Notifications</span>
             </a>
           </li>
           <li>
             <a href="#">
               <img src="./assets/message.png" alt="message" />
-              Messages
+              <span>Messages</span>
             </a>
           </li>
           <li>
-            <a href="#"><img src="./assets/grok.png" alt="grok" />Grok</a>
+            <a href="#"
+              ><img src="./assets/grok.png" alt="grok" /><span>Grok</span></a
+            >
           </li>
-          <li>
+          <li class="mobile">
             <a href="#">
               <img src="./assets/bookmark.png" alt="bookmark" />
-              Bookmarks
+              <span>Bookmarks</span>
             </a>
           </li>
           <li>
             <a href="#">
               <img src="./assets/community.png" alt="community" />
-              Communities
+              <span>Communities</span>
             </a>
           </li>
-          <li>
+          <li class="mobile">
             <a href="#">
               <img src="./assets/twitter.png" alt="twitter" />
-              Premium
+              <span>Premium</span>
             </a>
           </li>
-          <li>
+          <li class="mobile">
             <a href="#">
               <img src="./assets/verify.png" alt="verify" />
-              Verified Orgs
+              <span>Verified Orgs</span>
             </a>
           </li>
-          <li>
+          <li class="mobile">
             <a href="#">
               <img src="./assets/profile.png" alt="profile" />
-              Profile
+              <span>Profile</span>
             </a>
           </li>
-          <li>
-            <a href="#"><img src="./assets/more.png" alt="more" />More</a>
+          <li class="mobile">
+            <a href="#"
+              ><img src="./assets/more.png" alt="more" />
+              <span>More</span>
+            </a>
           </li>
         </ul>
       </nav>
       <main class="main-container">
         <header class="header">
+          <picture>
+            <source
+              srcset="./assets/old-twitter.png"
+              media="(max-width: 800px)"
+            />
+            <img
+              class="nav-logo"
+              src="./assets/twitter.png"
+              alt="twitter-logo"
+            />
+          </picture>
           <ul class="header-ul">
             <li id="header-here"><a>For you</a></li>
             <li><a>Following</a></li>
@@ -134,6 +168,7 @@
               <img
                 class="tweet-logo"
                 src="https://pbs.twimg.com/profile_images/1785743216131686400/mem0pYie_400x400.jpg"
+                alt="tweet-logo"
               />
               <div>
                 <div class="title">
@@ -147,6 +182,7 @@
                   new utilities to Lorenzo community members.
                   <img
                     src="https://pbs.twimg.com/media/GQhvnLMWIAAtFnD?format=jpg&name=medium"
+                    alt="tweet-logo"
                   />
                 </div>
               </div>
@@ -155,6 +191,7 @@
               <img
                 class="tweet-logo"
                 src="https://pbs.twimg.com/profile_images/1684683831230803970/Ba9S8nUl_400x400.jpg"
+                alt="tweet-logo"
               />
               <div>
                 <div class="title">
@@ -170,6 +207,7 @@
                   #AItools #Collaboration #Workspace
                   <img
                     src="https://velog.velcdn.com/images/party3205/post/616b7e3f-f8bb-4a06-8cc3-77f2a699604c/image.gif"
+                    alt="git-img"
                   />
                 </div>
               </div>
@@ -178,6 +216,7 @@
               <img
                 class="tweet-logo"
                 src="https://pbs.twimg.com/profile_images/1148918522547974144/DjWSZ9Ge_400x400.png"
+                alt="tweet-logo"
               />
               <div>
                 <div class="title">
@@ -203,7 +242,10 @@
                   </ul>
                   <br /><br />
                   #Display #Block #Inline
-                  <img src="https://htmldog.com/figures/displayBlock.png" />
+                  <img
+                    src="https://htmldog.com/figures/displayBlock.png"
+                    alt="html-dog"
+                  />
                 </div>
               </div>
             </div>
@@ -211,6 +253,7 @@
               <img
                 class="tweet-logo"
                 src="https://miro.medium.com/v2/resize:fit:360/1*CCli3HF_HO_OZVs-N_qumA.png"
+                alt="tweet-logo"
               />
               <div>
                 <div class="title">Float<span>@Float_CSS · Jun 20</span></div>
@@ -218,26 +261,19 @@
                   <img
                     style="float: left; width: 100px; height: 100px"
                     src="https://avatars.githubusercontent.com/u/78336307?v=4"
+                    alt="tweet-img"
                   />
                   <img
                     style="float: right; width: 100px; height: 100px"
                     src="https://avatars.githubusercontent.com/u/78336307?v=4"
+                    alt="tweet-img"
                   />
-                  Float is a CSS positioning property. To understand its purpose
-                  and origin, we can look to print design. In a print layout,
-                  images may be set into the page such that text wraps around
-                  them as needed. This is commonly and appropriately called
-                  “text wrap”. Here is an example of that.
-                  <hr />
-                  <img
-                    style="float: left; width: 100px; height: 100px"
-                    src="https://avatars.githubusercontent.com/u/78336307?v=4"
-                  />
-                  <img
-                    style="float: right; width: 100px; height: 100px"
-                    src="https://avatars.githubusercontent.com/u/78336307?v=4"
-                  />
-                  <p style="clear: both">
+                  <p class="test" style="clear: both">
+                    Float is a CSS positioning property. To understand its
+                    purpose and origin, we can look to print design. In a print
+                    layout, images may be set into the page such that text wraps
+                    around them as needed. This is commonly and appropriately
+                    called “text wrap”. Here is an example of that. ///
                     clear:both makes the element drop below any floated elements
                     that precede it in the document. You can also use clear:left
                     or clear:right to make it drop below only those elements
@@ -247,6 +283,7 @@
                   #Float #Left #Right #Clear
                   <img
                     src="https://i0.wp.com/css-tricks.com/wp-content/uploads/2021/03/web-text-wrap.png?resize=540%2C270&ssl=1"
+                    alt="tweet-img"
                   />
                 </div>
               </div>
@@ -255,6 +292,7 @@
               <img
                 class="tweet-logo"
                 src="https://media.dev.to/cdn-cgi/image/width=1080,height=1080,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fi%2Fmjb5mlnqxrplaumeq0lm.jpg"
+                alt="tweet-img"
               />
               <div>
                 <div class="title">Flex<span>@Flex_CSS · Jun 26</span></div>
@@ -296,6 +334,7 @@
                   #Flex #Wrap #Gap
                   <img
                     src="https://miro.medium.com/v2/resize:fit:800/1*xpjy9vmoYYR_5RGPBqQoIw.png"
+                    alt="tweet-img"
                   />
                 </div>
               </div>
@@ -304,6 +343,7 @@
               <img
                 class="tweet-logo"
                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcST0pogSTZjOHopmQ5rPmO_gvoadr-74ZSZmw&s"
+                alt="tweet-img"
               />
               <div>
                 <div class="title">Grid<span>@Grid_CSS · Jul 02</span></div>
@@ -325,6 +365,7 @@
                   #Grid #Wrap #Gap
                   <img
                     src="https://miro.medium.com/v2/resize:fit:1358/0*C8W3aR9H66rcj7Ml"
+                    alt="tweet-img"
                   />
                 </div>
               </div>
@@ -347,8 +388,9 @@
                   <img
                     class="tweet-logo"
                     src="https://pbs.twimg.com/profile_images/1780044485541699584/p78MCn3B_400x400.jpg"
+                    alt="tweet-logo"
                   />
-                  <div class="title">Elon Musk<span>is speaking</span></div>
+                  <strong>Elon Musk<span>is speaking</span></strong>
                 </div>
                 <div class="side-talk">
                   Tonight was a clear victory … for memes
@@ -362,6 +404,7 @@
                   <img
                     class="happen-logo"
                     src="https://pbs.twimg.com/semantic_core_img/1805830747460100096/2o4pEker?format=jpg&name=360x360"
+                    alt="tweet-logo"
                   />
                   <div class="happen-title">
                     Uruguay vs Bolivia<span>Copa América · Last night</span>
@@ -387,9 +430,98 @@
                 </div>
               </div>
             </div>
+            <div
+              class="side-content accordion accordion-flush"
+              id="accordionFlushExample"
+            >
+              <h3>FAQ</h3>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingOne">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseOne"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseOne"
+                  >
+                    What is X?
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapseOne"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="flush-headingOne"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body">
+                    X is a service for friends, family, and coworkers to
+                    communicate and stay connected through the exchange of
+                    quick, frequent messages. People post posts, which may
+                    contain photos, videos, links, and text. These messages are
+                    posted to your profile, sent to your followers, and are
+                    searchable on X search.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingTwo">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseTwo"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseTwo"
+                  >
+                    Do I need anything special to use it?
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapseTwo"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="flush-headingTwo"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body">
+                    All you need to use X is an internet connection or a mobile
+                    phone. Join us here! Once you're in, begin finding and
+                    following accounts whose posts interest you. We'll recommend
+                    great accounts once you're signed up.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingThree">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseThree"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseThree"
+                  >
+                    What's a post?
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapseThree"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="flush-headingThree"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body">
+                    A post is any message posted to X which may contain photos,
+                    videos, links, and text. Click or tap the
+                    <strong>post</strong> button to post the update to your
+                    profile. Read our Posting a post article for more
+                    information.
+                  </div>
+                </div>
+              </div>
+            </div>
           </aside>
         </section>
-        <footer>footer</footer>
       </main>
       <div class="message-container">
         <div class="message-header" onclick="onMessageBox()">
@@ -408,18 +540,20 @@
             <img
               class="tweet-logo"
               src="https://pbs.twimg.com/profile_images/874276197357596672/kUuht00m_400x400.jpg"
+              alt="tweet-logo"
             />
             <div>
               <div class="title">
                 Donald J. Trump<span>@realDonaldTrump · 5h</span>
               </div>
-              <div class="content">Come on bro</div>
+              <div class="content">I'm come back from hell!!!</div>
             </div>
           </div>
           <div class="message-content">
             <img
               class="tweet-logo"
               src="https://pbs.twimg.com/profile_images/1780044485541699584/p78MCn3B_400x400.jpg"
+              alt="tweet-logo"
             />
             <div>
               <div class="title">
