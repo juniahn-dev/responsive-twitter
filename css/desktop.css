@@ -21,18 +21,17 @@
 
   font-size: 20px;
 
-  .nav-logo {
+  .navLogo {
     filter: invert(1);
     width: 25px;
     height: 25px;
     margin: 12px 12px;
   }
 
-  .nav-ul {
+  .navUl {
     display: flex;
     flex-direction: column;
     gap: 10px;
-
     width: 260px;
 
     li {
@@ -44,11 +43,9 @@
 
       & > a {
         position: relative;
-
         display: flex;
         align-items: center;
         padding: 12px;
-
         width: fit-content;
         border-radius: 30px;
 
@@ -63,7 +60,6 @@
           position: absolute;
           top: 10px;
           left: 35px;
-
           width: 7px;
           height: 7px;
           border-radius: 50%;
@@ -81,7 +77,7 @@
   }
 }
 
-.main-container {
+.mainContainer {
   display: flex;
   flex-direction: column;
 
@@ -105,7 +101,7 @@
       display: none;
     }
 
-    .header-ul {
+    .headerUl {
       display: grid;
       grid-template-columns: 1fr 1fr;
 
@@ -124,7 +120,7 @@
           color: #6f767b;
         }
 
-        &#header-here {
+        &#headerHere {
           a {
             border-bottom: 3px solid var(--default-blue);
 
@@ -151,18 +147,18 @@
 }
 
 /* only move content to y scroll */
-.content-container {
+.contentContainer {
   overflow-y: scroll;
 
   display: grid;
   grid-template-columns: 3.2fr 2fr;
 
-  .content-wrapper {
+  .contentWrapper {
     border-right: 1px solid var(--default-gray);
 
     font-size: 1.5rem;
 
-    .twitter-content {
+    .twitterContent {
       display: grid;
       grid-template-columns: 50px 1fr;
 
@@ -173,7 +169,7 @@
         border-bottom: none;
       }
 
-      .tweet-logo {
+      .tweetLogo {
         width: 40px;
         height: 40px;
         border-radius: 5px;
@@ -206,12 +202,36 @@
     }
   }
 
-  .side-content-wrapper {
+  .sideContentWrapper {
     margin: 12px 30px;
   }
 }
 
-.grid-example {
+.container404 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 80px 0;
+
+  h1 {
+    color: var(--light-gray);
+    font-size: 1.5rem;
+  }
+
+  button {
+    margin-top: 20px;
+    padding: 6px 18px;
+    background-color: var(--default-blue);
+    border-radius: 50px;
+
+    font-size: 15px;
+    font-weight: bold;
+  }
+}
+
+.gridExample {
   display: grid;
   border: 1px solid var(--default-white);
   padding: 10px;
@@ -228,25 +248,25 @@
     gap: 10px;
   }
 
-  .grid-header {
+  .gridHeader {
     background-color: teal;
     grid-area: header;
   }
-  .grid-main {
+  .gridMain {
     background-color: orange;
     grid-area: main;
   }
-  .grid-aside {
+  .gridAside {
     background-color: thistle;
     grid-area: aside;
   }
-  .grid-footer {
+  .gridFooter {
     background-color: gray;
     grid-area: footer;
   }
 }
 
-.white-space {
+.whiteSpace {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -255,7 +275,7 @@
   margin-top: 20px;
 }
 
-.side-content-wrapper {
+.sideContentWrapper {
   overflow-y: scroll;
   display: flex;
   flex-direction: column;
@@ -263,7 +283,7 @@
 
   font-size: 1.5rem;
 
-  .side-content {
+  .sideContent {
     padding: 12px 16px;
     border: 1px solid var(--default-gray);
     border-radius: 16px;
@@ -285,26 +305,26 @@
       }
     }
 
-    .side-info {
+    .sideInfo {
       margin-top: 10px;
 
-      .side-title {
+      .sideTitle {
         display: flex;
 
-        .tweet-logo {
+        .tweetLogo {
           width: 16px;
           height: 16px;
           border-radius: 50%;
         }
 
-        .happen-logo {
+        .happenLogo {
           width: 79px;
           height: 79px;
           border-radius: 10px;
           object-fit: cover;
         }
 
-        .happen-title {
+        .happenTitle {
           margin-left: 10px;
 
           font-size: 15px;
@@ -341,7 +361,7 @@
         margin-top: 20px;
       }
 
-      .side-talk {
+      .sideTalk {
         margin-top: 10px;
       }
     }
@@ -364,7 +384,7 @@
 
       color: inherit;
 
-      .accordion-header {
+      .accordionHeader {
         button {
           background-color: inherit;
           padding: 8px 0;
@@ -384,13 +404,14 @@
   }
 }
 
-.message-container {
+.messageContainer {
   position: fixed;
-  bottom: -300px;
+  bottom: calc(-60% + 53px);
   right: 25px;
 
   transition: all 300ms ease 0s;
 
+  height: 60%;
   min-width: 350px;
   background-color: var(--default-black);
   border-top-right-radius: 16px;
@@ -400,15 +421,15 @@
 
   font-size: 1.5rem;
 
-  &.message-box-on {
+  &.messageBoxOn {
     bottom: 0;
 
-    .message-img.arrow {
+    .messageImg.arrow {
       rotate: 0deg !important;
     }
   }
 
-  .message-header {
+  .messageHeader {
     cursor: pointer;
 
     display: flex;
@@ -418,7 +439,7 @@
     height: 53px;
     padding: 0 16px;
 
-    .message-img {
+    .messageImg {
       filter: invert(1);
       width: 20px;
       height: 20px;
@@ -428,15 +449,15 @@
       }
     }
 
-    .message-img.arrow {
+    .messageImg.arrow {
       rotate: 180deg;
     }
   }
 
-  .message-body {
-    min-height: 300px;
+  .messageBody {
+    height: 100%;
 
-    .message-content {
+    .messageContent {
       cursor: pointer;
       display: grid;
       grid-template-columns: 50px 1fr;
@@ -447,7 +468,7 @@
         background-color: rgba(171, 189, 200, 0.1);
       }
 
-      .tweet-logo {
+      .tweetLogo {
         width: 40px;
         height: 40px;
         border-radius: 50%;
@@ -479,10 +500,60 @@
   }
 }
 
+.contentUl {
+  margin-top: 20px;
+
+  li {
+    display: inline-block;
+
+    margin-right: 10px;
+    padding: 10px;
+    border: 1px solid red;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.flexExample.flex {
+  display: flex;
+}
+
+.flexExample {
+  padding: 10px;
+  border: 1px solid purple;
+
+  & > div {
+    padding: 10px 30px;
+    margin-right: 10px;
+    border: 1px solid red;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.galleryContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+
+  .galleryImg {
+    height: -webkit-fill-available;
+  }
+}
+
+.floatAnimation {
+  animation: moveFloatBox 1s infinite alternate;
+}
+
 @keyframes moveFloatBox {
   from {
-    clear: clear;
+    clear: both;
   }
+
   to {
     clear: none;
   }

@@ -11,7 +11,7 @@
     <link rel="icon" href="../favicon.ico" />
     <style>
       /* Internal CSS */
-      .content-ul {
+      .contentUl {
         margin-top: 20px;
         li {
           display: inline-block;
@@ -26,11 +26,11 @@
         }
       }
 
-      .flex-example.flex {
+      .flexExample.flex {
         display: flex;
       }
 
-      .flex-example {
+      .flexExample {
         padding: 10px;
         border: 1px solid purple;
 
@@ -57,14 +57,10 @@
             srcset="../assets/old-twitter.png"
             media="(max-width: 800px)"
           />
-          <img
-            class="nav-logo"
-            src="../assets/twitter.png"
-            alt="twitter-logo"
-          />
+          <img class="navLogo" src="../assets/twitter.png" alt="twitter-logo" />
         </picture>
         <!-- Navigation Links -->
-        <ul class="nav-ul">
+        <ul class="navUl">
           <!-- Displaying to current page using id tag -->
           <li>
             <a href="../index.html">
@@ -134,10 +130,10 @@
           </li>
         </ul>
       </nav>
-      <main class="main-container">
+      <main class="mainContainer">
         <header class="header">
-          <ul class="header-ul">
-            <li id="header-here"><a>For you</a></li>
+          <ul class="headerUl">
+            <li id="headerHere"><a>For you</a></li>
             <li><a>Following</a></li>
           </ul>
           <form>
@@ -145,12 +141,12 @@
           </form>
         </header>
         <!-- Main Content Section -->
-        <section class="content-container">
+        <section class="contentContainer">
           <!-- Main Tweet list -->
-          <div class="content-wrapper">
-            <div class="twitter-content">
+          <div class="contentWrapper">
+            <div class="twitterContent">
               <img
-                class="tweet-logo"
+                class="tweetLogo"
                 src="https://pbs.twimg.com/profile_images/1785743216131686400/mem0pYie_400x400.jpg"
               />
               <div>
@@ -169,9 +165,9 @@
                 </div>
               </div>
             </div>
-            <div class="twitter-content">
+            <div class="twitterContent">
               <img
-                class="tweet-logo"
+                class="tweetLogo"
                 src="https://pbs.twimg.com/profile_images/1684683831230803970/Ba9S8nUl_400x400.jpg"
               />
               <div>
@@ -192,9 +188,9 @@
                 </div>
               </div>
             </div>
-            <div class="twitter-content">
+            <div class="twitterContent">
               <img
-                class="tweet-logo"
+                class="tweetLogo"
                 src="https://pbs.twimg.com/profile_images/1148918522547974144/DjWSZ9Ge_400x400.png"
               />
               <div>
@@ -214,7 +210,7 @@
                       >with an effective line break before and after it.</span
                     >
                   </span>
-                  <ul class="content-ul">
+                  <ul class="contentUl">
                     <li>Inline Block 1</li>
                     <li>Inline Block 2</li>
                     <li>Inline Block 3</li>
@@ -225,9 +221,9 @@
                 </div>
               </div>
             </div>
-            <div class="twitter-content">
+            <div class="twitterContent">
               <img
-                class="tweet-logo"
+                class="tweetLogo"
                 src="https://miro.medium.com/v2/resize:fit:360/1*CCli3HF_HO_OZVs-N_qumA.png"
               />
               <div>
@@ -260,16 +256,16 @@
                 </div>
               </div>
             </div>
-            <div class="twitter-content">
+            <div class="twitterContent">
               <img
-                class="tweet-logo"
+                class="tweetLogo"
                 src="https://media.dev.to/cdn-cgi/image/width=1080,height=1080,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fi%2Fmjb5mlnqxrplaumeq0lm.jpg"
               />
               <div>
                 <div class="title">Flex<span>@Flex_CSS · Jun 26</span></div>
                 <div class="content">
                   <div
-                    class="flex-example flex"
+                    class="flexExample flex"
                     style="flex-wrap: nowrap; width: 200px"
                   >
                     <div>Item One</div>
@@ -278,7 +274,7 @@
                     <div>Item Four</div>
                   </div>
                   <div
-                    class="flex-example flex"
+                    class="flexExample flex"
                     style="flex-wrap: wrap; gap: 10px; width: 200px"
                   >
                     <div>Item One</div>
@@ -294,7 +290,7 @@
                     <div>Item Three</div>
                     <div>Item Four</div>
                   </div>
-                  <div class="flex-example flex">
+                  <div class="flexExample flex">
                     <!-- Mixed ordering with using, flex -->
                     <div style="order: 2">One</div>
                     <div style="order: 4">Two</div>
@@ -309,21 +305,21 @@
                 </div>
               </div>
             </div>
-            <div class="twitter-content">
+            <div class="twitterContent">
               <img
-                class="tweet-logo"
+                class="tweetLogo"
                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcST0pogSTZjOHopmQ5rPmO_gvoadr-74ZSZmw&s"
               />
               <div>
                 <div class="title">Grid<span>@Grid_CSS · Jul 02</span></div>
                 <div class="content">
-                  <div class="grid-example" style="display: grid" id="grid1">
-                    <div class="grid-header">header</div>
-                    <div class="grid-main">main</div>
-                    <div class="grid-aside">aside</div>
-                    <div class="grid-footer">footer</div>
+                  <div class="gridExample" style="display: grid" id="grid1">
+                    <div class="gridHeader">header</div>
+                    <div class="gridMain">main</div>
+                    <div class="gridAside">aside</div>
+                    <div class="gridFooter">footer</div>
                   </div>
-                  <div class="white-space">
+                  <div class="whiteSpace">
                     Determines a grid item’s location within the grid by
                     referring to specific grid lines.
                     grid-column-start/grid-row-start is the line where the item
@@ -340,43 +336,43 @@
             </div>
           </div>
           <!-- Side X Info -->
-          <aside class="side-content-wrapper">
-            <div class="side-content">
+          <aside class="sideContentWrapper">
+            <div class="sideContent">
               <h3>Subscribe to Premium</h3>
-              <div class="side-info">
+              <div class="sideInfo">
                 Subscribe to unlock new features and if eligible, receive a
                 share of ads revenue.
               </div>
               <button>Subscribe</button>
             </div>
-            <div class="side-content">
+            <div class="sideContent">
               <h3>Live on X</h3>
-              <div class="side-info">
-                <div class="side-title">
+              <div class="sideInfo">
+                <div class="sideTitle">
                   <img
-                    class="tweet-logo"
+                    class="tweetLogo"
                     src="https://pbs.twimg.com/profile_images/1780044485541699584/p78MCn3B_400x400.jpg"
                   />
                   <strong>Elon Musk<span>is speaking</span></strong>
                 </div>
-                <div class="side-talk">
+                <div class="sideTalk">
                   Tonight was a clear victory … for memes
                 </div>
               </div>
             </div>
-            <div class="side-content">
+            <div class="sideContent">
               <h3>What's happening</h3>
-              <div class="side-info">
-                <div class="side-title">
+              <div class="sideInfo">
+                <div class="sideTitle">
                   <img
-                    class="happen-logo"
+                    class="happenLogo"
                     src="https://pbs.twimg.com/semantic_core_img/1805830747460100096/2o4pEker?format=jpg&name=360x360"
                   />
-                  <div class="happen-title">
+                  <div class="happenTitle">
                     Uruguay vs Bolivia<span>Copa América · Last night</span>
                   </div>
                 </div>
-                <div class="side-title trend">
+                <div class="sideTitle trend">
                   <div class="trend-content">
                     <span>Business & finance · Trending</span>
                     <p>Bitcoin</p>
@@ -399,26 +395,22 @@
           </aside>
         </section>
       </main>
-      <div class="message-container">
-        <div class="message-header" onclick="onMessageBox()">
+      <div class="messageContainer">
+        <div class="messageHeader" onclick="onMessageBox()">
           Messages
           <div>
+            <img class="messageImg" src="../assets/message.png" alt="message" />
             <img
-              class="message-img"
-              src="../assets/message.png"
-              alt="message"
-            />
-            <img
-              class="message-img arrow"
+              class="messageImg arrow"
               src="../assets/double-arrow.png"
               alt="arrow"
             />
           </div>
         </div>
-        <div class="message-body">
-          <div class="message-content">
+        <div class="messageBody">
+          <div class="messageContent">
             <img
-              class="tweet-logo"
+              class="tweetLogo"
               src="https://pbs.twimg.com/profile_images/874276197357596672/kUuht00m_400x400.jpg"
             />
             <div>
@@ -428,9 +420,9 @@
               <div class="content">I'm come back from hell!!!</div>
             </div>
           </div>
-          <div class="message-content">
+          <div class="messageContent">
             <img
-              class="tweet-logo"
+              class="tweetLogo"
               src="https://pbs.twimg.com/profile_images/1780044485541699584/p78MCn3B_400x400.jpg"
             />
             <div>
@@ -454,16 +446,16 @@
 
       const onMessageBox = () => {
         const messageContainer =
-          document.getElementsByClassName("message-container")[0];
+          document.getElementsByClassName("messageContainer")[0];
         const classList = messageContainer.classList.value.split(" ");
-        const isOnClass = classList.find((v) => v === "message-box-on");
+        const isOnClass = classList.find((v) => v === "messageBoxOn");
 
         if (!isOnClass) {
-          messageContainer.classList.add("message-box-on");
+          messageContainer.classList.add("messageBoxOn");
           return;
         }
 
-        messageContainer.classList.remove("message-box-on");
+        messageContainer.classList.remove("messageBoxOn");
       };
     </script>
   </body>

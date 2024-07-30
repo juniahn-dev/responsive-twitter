@@ -8,7 +8,7 @@
       margin-right: 20px;
     }
 
-    .nav-ul {
+    .navUl {
       align-items: flex-end;
 
       width: calc(100vw - 79vw);
@@ -27,15 +27,15 @@
     }
   }
 
-  .main-container {
+  .mainContainer {
     margin-left: 21.1vw;
   }
 }
 
 @media screen and (max-width: 1162px) {
-  .main-container {
+  .mainContainer {
     .header {
-      .header-ul {
+      .headerUl {
         min-width: 516px;
       }
 
@@ -44,10 +44,14 @@
       }
     }
 
-    .content-container {
-      .side-content-wrapper {
+    .contentContainer {
+      .sideContentWrapper {
         display: none;
       }
     }
+  }
+
+  .galleryContainer {
+    grid-template-columns: repeat(2, 1fr);
   }
 }

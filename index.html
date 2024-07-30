@@ -14,46 +14,9 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
     <link rel="icon" href="./favicon.ico" />
-    <style>
-      /* Internal CSS */
-      .content-ul {
-        margin-top: 20px;
 
-        li {
-          display: inline-block;
-
-          margin-right: 10px;
-          padding: 10px;
-          border: 1px solid red;
-
-          &:last-child {
-            margin-right: 0;
-          }
-        }
-      }
-
-      .flex-example.flex {
-        display: flex;
-      }
-
-      .flex-example {
-        padding: 10px;
-        border: 1px solid purple;
-
-        & > div {
-          padding: 10px 30px;
-          margin-right: 10px;
-          border: 1px solid red;
-
-          &:last-child {
-            margin-right: 0;
-          }
-        }
-      }
-    </style>
     <title>Home / X</title>
   </head>
   <body>
@@ -66,10 +29,10 @@
             srcset="./assets/old-twitter.png"
             media="(max-width: 800px)"
           />
-          <img class="nav-logo" src="./assets/twitter.png" alt="twitter-logo" />
+          <img class="navLogo" src="./assets/twitter.png" alt="twitter-logo" />
         </picture>
         <!-- Navigation Links -->
-        <ul class="nav-ul">
+        <ul class="navUl">
           <!-- Displaying to current page using id tag -->
           <li id="here">
             <a href="#">
@@ -139,7 +102,7 @@
           </li>
         </ul>
       </nav>
-      <main class="main-container">
+      <main class="mainContainer">
         <header class="header">
           <picture>
             <source
@@ -147,13 +110,13 @@
               media="(max-width: 800px)"
             />
             <img
-              class="nav-logo"
+              class="navLogo"
               src="./assets/twitter.png"
               alt="twitter-logo"
             />
           </picture>
-          <ul class="header-ul">
-            <li id="header-here"><a>For you</a></li>
+          <ul class="headerUl">
+            <li id="headerHere"><a>For you</a></li>
             <li><a>Following</a></li>
           </ul>
           <form>
@@ -161,14 +124,14 @@
           </form>
         </header>
         <!-- Main Content Section -->
-        <section class="content-container">
+        <section class="contentContainer">
           <!-- Main Tweet list -->
-          <div class="content-wrapper">
-            <div class="twitter-content">
+          <div class="contentWrapper">
+            <div class="twitterContent">
               <img
-                class="tweet-logo"
+                class="tweetLogo"
                 src="https://pbs.twimg.com/profile_images/1785743216131686400/mem0pYie_400x400.jpg"
-                alt="tweet-logo"
+                alt="tweetLogo"
               />
               <div>
                 <div class="title">
@@ -182,16 +145,16 @@
                   new utilities to Lorenzo community members.
                   <img
                     src="https://pbs.twimg.com/media/GQhvnLMWIAAtFnD?format=jpg&name=medium"
-                    alt="tweet-logo"
+                    alt="tweetLogo"
                   />
                 </div>
               </div>
             </div>
-            <div class="twitter-content">
+            <div class="twitterContent">
               <img
-                class="tweet-logo"
+                class="tweetLogo"
                 src="https://pbs.twimg.com/profile_images/1684683831230803970/Ba9S8nUl_400x400.jpg"
-                alt="tweet-logo"
+                alt="tweetLogo"
               />
               <div>
                 <div class="title">
@@ -212,11 +175,11 @@
                 </div>
               </div>
             </div>
-            <div class="twitter-content">
+            <div class="twitterContent">
               <img
-                class="tweet-logo"
+                class="tweetLogo"
                 src="https://pbs.twimg.com/profile_images/1148918522547974144/DjWSZ9Ge_400x400.png"
-                alt="tweet-logo"
+                alt="tweetLogo"
               />
               <div>
                 <div class="title">
@@ -235,7 +198,7 @@
                       >with an effective line break before and after it.</span
                     >
                   </span>
-                  <ul class="content-ul">
+                  <ul class="contentUl">
                     <li>Inline Block 1</li>
                     <li>Inline Block 2</li>
                     <li>Inline Block 3</li>
@@ -249,11 +212,11 @@
                 </div>
               </div>
             </div>
-            <div class="twitter-content">
+            <div class="twitterContent">
               <img
-                class="tweet-logo"
+                class="tweetLogo"
                 src="https://miro.medium.com/v2/resize:fit:360/1*CCli3HF_HO_OZVs-N_qumA.png"
-                alt="tweet-logo"
+                alt="tweetLogo"
               />
               <div>
                 <div class="title">Float<span>@Float_CSS · Jun 20</span></div>
@@ -268,7 +231,7 @@
                     src="https://avatars.githubusercontent.com/u/78336307?v=4"
                     alt="tweet-img"
                   />
-                  <p class="test" style="clear: both">
+                  <p class="floatAnimation">
                     Float is a CSS positioning property. To understand its
                     purpose and origin, we can look to print design. In a print
                     layout, images may be set into the page such that text wraps
@@ -288,9 +251,9 @@
                 </div>
               </div>
             </div>
-            <div class="twitter-content">
+            <div class="twitterContent">
               <img
-                class="tweet-logo"
+                class="tweetLogo"
                 src="https://media.dev.to/cdn-cgi/image/width=1080,height=1080,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fi%2Fmjb5mlnqxrplaumeq0lm.jpg"
                 alt="tweet-img"
               />
@@ -298,7 +261,7 @@
                 <div class="title">Flex<span>@Flex_CSS · Jun 26</span></div>
                 <div class="content">
                   <div
-                    class="flex-example flex"
+                    class="flexExample flex"
                     style="flex-wrap: nowrap; width: 200px"
                   >
                     <div>Item One</div>
@@ -307,7 +270,7 @@
                     <div>Item Four</div>
                   </div>
                   <div
-                    class="flex-example flex"
+                    class="flexExample flex"
                     style="flex-wrap: wrap; gap: 10px; width: 200px"
                   >
                     <div>Item One</div>
@@ -323,7 +286,7 @@
                     <div>Item Three</div>
                     <div>Item Four</div>
                   </div>
-                  <div class="flex-example flex">
+                  <div class="flexExample flex">
                     <!-- Mixed ordering with using, flex -->
                     <div style="order: 2">One</div>
                     <div style="order: 4">Two</div>
@@ -339,22 +302,22 @@
                 </div>
               </div>
             </div>
-            <div class="twitter-content">
+            <div class="twitterContent">
               <img
-                class="tweet-logo"
+                class="tweetLogo"
                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcST0pogSTZjOHopmQ5rPmO_gvoadr-74ZSZmw&s"
                 alt="tweet-img"
               />
               <div>
                 <div class="title">Grid<span>@Grid_CSS · Jul 02</span></div>
                 <div class="content">
-                  <div class="grid-example" style="display: grid" id="grid1">
-                    <div class="grid-header">header</div>
-                    <div class="grid-main">main</div>
-                    <div class="grid-aside">aside</div>
-                    <div class="grid-footer">footer</div>
+                  <div class="gridExample" style="display: grid" id="grid1">
+                    <div class="gridHeader">header</div>
+                    <div class="gridMain">main</div>
+                    <div class="gridAside">aside</div>
+                    <div class="gridFooter">footer</div>
                   </div>
-                  <div class="white-space">
+                  <div class="whiteSpace">
                     Determines a grid item’s location within the grid by
                     referring to specific grid lines.
                     grid-column-start/grid-row-start is the line where the item
@@ -370,47 +333,108 @@
                 </div>
               </div>
             </div>
+            <div class="twitterContent">
+              <img
+                class="tweetLogo"
+                src="https://contentadmin.vanartgallery.bc.ca/wp-content/uploads/2023/06/MAG_ConceptionsofWhite_036_1280px.jpg"
+                alt="tweet-img"
+              />
+              <div>
+                <div class="title">Gallery<span>@Gallery · Aug 17</span></div>
+                <div class="content">
+                  <div class="galleryContainer">
+                    <img
+                      class="galleryImg"
+                      src="https://www.fearfreehappyhomes.com/wp-content/uploads/2021/04/bigstock-Kitten-In-Pink-Blanket-Looking-415440131.jpg"
+                      alt="tweet-img"
+                    />
+                    <img
+                      class="galleryImg"
+                      src="https://cdn.shopify.com/s/files/1/0997/4496/articles/Do_kittens_shed_f9917858-b52f-4192-bf8e-4f46ed98e9aa.jpg?v=1698540349"
+                      alt="tweet-img"
+                    />
+                    <img
+                      class="galleryImg"
+                      src="https://miamipetconcierge.com/wp-content/uploads/2022/01/Depositphotos_2186038_XL-scaled-1-1024x682.jpg"
+                      alt="tweet-img"
+                    />
+                    <img
+                      class="galleryImg"
+                      src="https://t3.ftcdn.net/jpg/00/61/09/84/360_F_61098445_oZqWpXnsq5OFw2CBaG49c2Y5eNgcuFIZ.jpg"
+                      alt="tweet-img"
+                    />
+                    <img
+                      class="galleryImg"
+                      src="https://www.whiskas.co.uk/cdn-cgi/image/format=auto,q=90/sites/g/files/fnmzdf5651/files/2022-09/Kitten-mobile.jpg"
+                      alt="tweet-img"
+                    />
+                    <img
+                      class="galleryImg"
+                      src="https://www.bluecross.org.uk/sites/default/files/d8/2020-05/Kitten%20Knowhow%20bottom%20pic%20145472.jpg"
+                      alt="tweet-img"
+                    />
+                    <img
+                      class="galleryImg"
+                      src="https://www.vetstreet.com/wp-content/uploads/2024/02/shutterstock_19546774.jpg"
+                      alt="tweet-img"
+                    />
+                    <img
+                      class="galleryImg"
+                      src="https://d2zp5xs5cp8zlg.cloudfront.net/image-78260-800.jpg"
+                      alt="tweet-img"
+                    />
+                    <img
+                      class="galleryImg"
+                      src="https://www.burgesspetcare.com/wp-content/uploads/2024/01/shutterstock_1037942467-1.jpg"
+                      alt="tweet-img"
+                    />
+                  </div>
+                  <br /><br />
+                  #Gallery
+                </div>
+              </div>
+            </div>
           </div>
           <!-- Side X Info -->
-          <aside class="side-content-wrapper">
-            <div class="side-content">
+          <aside class="sideContentWrapper">
+            <div class="sideContent">
               <h3>Subscribe to Premium</h3>
-              <div class="side-info">
+              <div class="sideInfo">
                 Subscribe to unlock new features and if eligible, receive a
                 share of ads revenue.
               </div>
               <button>Subscribe</button>
             </div>
-            <div class="side-content">
+            <div class="sideContent">
               <h3>Live on X</h3>
-              <div class="side-info">
-                <div class="side-title">
+              <div class="sideInfo">
+                <div class="sideTitle">
                   <img
-                    class="tweet-logo"
+                    class="tweetLogo"
                     src="https://pbs.twimg.com/profile_images/1780044485541699584/p78MCn3B_400x400.jpg"
-                    alt="tweet-logo"
+                    alt="tweetLogo"
                   />
                   <strong>Elon Musk<span>is speaking</span></strong>
                 </div>
-                <div class="side-talk">
+                <div class="sideTalk">
                   Tonight was a clear victory … for memes
                 </div>
               </div>
             </div>
-            <div class="side-content">
+            <div class="sideContent">
               <h3>What's happening</h3>
-              <div class="side-info">
-                <div class="side-title">
+              <div class="sideInfo">
+                <div class="sideTitle">
                   <img
-                    class="happen-logo"
+                    class="happenLogo"
                     src="https://pbs.twimg.com/semantic_core_img/1805830747460100096/2o4pEker?format=jpg&name=360x360"
-                    alt="tweet-logo"
+                    alt="tweetLogo"
                   />
-                  <div class="happen-title">
+                  <div class="happenTitle">
                     Uruguay vs Bolivia<span>Copa América · Last night</span>
                   </div>
                 </div>
-                <div class="side-title trend">
+                <div class="sideTitle trend">
                   <div class="trend-content">
                     <span>Business & finance · Trending</span>
                     <p>Bitcoin</p>
@@ -431,12 +455,12 @@
               </div>
             </div>
             <div
-              class="side-content accordion accordion-flush"
+              class="sideContent accordion accordion-flush"
               id="accordionFlushExample"
             >
               <h3>FAQ</h3>
               <div class="accordion-item">
-                <h2 class="accordion-header" id="flush-headingOne">
+                <h4 class="accordionHeader" id="flush-headingOne">
                   <button
                     class="accordion-button collapsed"
                     type="button"
@@ -447,7 +471,7 @@
                   >
                     What is X?
                   </button>
-                </h2>
+                </h4>
                 <div
                   id="flush-collapseOne"
                   class="accordion-collapse collapse"
@@ -465,7 +489,7 @@
                 </div>
               </div>
               <div class="accordion-item">
-                <h2 class="accordion-header" id="flush-headingTwo">
+                <h4 class="accordionHeader" id="flush-headingTwo">
                   <button
                     class="accordion-button collapsed"
                     type="button"
@@ -476,7 +500,7 @@
                   >
                     Do I need anything special to use it?
                   </button>
-                </h2>
+                </h4>
                 <div
                   id="flush-collapseTwo"
                   class="accordion-collapse collapse"
@@ -492,7 +516,7 @@
                 </div>
               </div>
               <div class="accordion-item">
-                <h2 class="accordion-header" id="flush-headingThree">
+                <h4 class="accordionHeader" id="flush-headingThree">
                   <button
                     class="accordion-button collapsed"
                     type="button"
@@ -503,7 +527,7 @@
                   >
                     What's a post?
                   </button>
-                </h2>
+                </h4>
                 <div
                   id="flush-collapseThree"
                   class="accordion-collapse collapse"
@@ -523,24 +547,24 @@
           </aside>
         </section>
       </main>
-      <div class="message-container">
-        <div class="message-header" onclick="onMessageBox()">
+      <div class="messageContainer">
+        <div class="messageHeader" onclick="onMessageBox()">
           Messages
           <div>
-            <img class="message-img" src="./assets/message.png" alt="message" />
+            <img class="messageImg" src="./assets/message.png" alt="message" />
             <img
-              class="message-img arrow"
+              class="messageImg arrow"
               src="./assets/double-arrow.png"
               alt="arrow"
             />
           </div>
         </div>
-        <div class="message-body">
-          <div class="message-content">
+        <div class="messageBody">
+          <div class="messageContent">
             <img
-              class="tweet-logo"
+              class="tweetLogo"
               src="https://pbs.twimg.com/profile_images/874276197357596672/kUuht00m_400x400.jpg"
-              alt="tweet-logo"
+              alt="tweetLogo"
             />
             <div>
               <div class="title">
@@ -549,11 +573,11 @@
               <div class="content">I'm come back from hell!!!</div>
             </div>
           </div>
-          <div class="message-content">
+          <div class="messageContent">
             <img
-              class="tweet-logo"
+              class="tweetLogo"
               src="https://pbs.twimg.com/profile_images/1780044485541699584/p78MCn3B_400x400.jpg"
-              alt="tweet-logo"
+              alt="tweetLogo"
             />
             <div>
               <div class="title">
@@ -566,6 +590,7 @@
       </div>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
       document.querySelector("form").addEventListener("keydown", function (e) {
         if (event.key === "Enter") {
@@ -576,16 +601,16 @@
 
       const onMessageBox = () => {
         const messageContainer =
-          document.getElementsByClassName("message-container")[0];
+          document.getElementsByClassName("messageContainer")[0];
         const classList = messageContainer.classList.value.split(" ");
-        const isOnClass = classList.find((v) => v === "message-box-on");
+        const isOnClass = classList.find((v) => v === "messageBoxOn");
 
         if (!isOnClass) {
-          messageContainer.classList.add("message-box-on");
+          messageContainer.classList.add("messageBoxOn");
           return;
         }
 
-        messageContainer.classList.remove("message-box-on");
+        messageContainer.classList.remove("messageBoxOn");
       };
     </script>
   </body>
